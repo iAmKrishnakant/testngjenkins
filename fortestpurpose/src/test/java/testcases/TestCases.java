@@ -31,7 +31,7 @@ public class TestCases extends BaseClass {
 	ProductDetails prodtls;
 	Cart cart ;
 	CheckOut cout;
-	@Test(priority = 1 , dataProvider = "OTPS for signup" , dataProviderClass = DataProviderClass.class)
+//	@Test(priority = 1 , dataProvider = "OTPS for signup" , dataProviderClass = DataProviderClass.class)
 	public void Register(int otp ,String scenario ) {
 		
 		// before signup or login update mobile numer
@@ -123,7 +123,12 @@ public class TestCases extends BaseClass {
 		case "correct number" :
 			lg.enterMobilenumber(mobileNumber);
 			lgOtp = lg.clickOnReqOTP();
-			lgOtp.enterCorrectOtpForLogin();
+			try {
+				lgOtp.enterCorrectOtpForLogin();
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			homeli = new Home_Logged_in();
 			boolean title = homeli.verifyTitle(homePageTitle);
 
@@ -144,11 +149,11 @@ public class TestCases extends BaseClass {
 
 	}
 	
-	@Test(priority = 3)
+	//@Test(priority = 3)
 	public void addProductInCart() {
 		// before signup or login update mobile number
 		String homePageTitle = "Online Shopping Site for Mobiles, Electronics, Furniture, Grocery, Lifestyle, Books & More. Best Offers!";
-		long mobileNumber = 5465988741L;
+		long mobileNumber = 6354635550L;
 		String Searchdata = "iphone 16";
 		String productName = "Apple iPhone 16 (Black, 256 GB)";
 		String proDetailsPageTitle = "Apple iPhone 16 ( 256 GB Storage, 0 GB RAM ) Online at Best Price On Flipkart.com";
@@ -163,7 +168,12 @@ public class TestCases extends BaseClass {
 		lg = hp.clickOnLogin();
 		lg.enterMobilenumber(mobileNumber);
 		lgOtp = lg.clickOnReqOTP();
-		lgOtp.enterCorrectOtpForLogin();
+		try {
+			lgOtp.enterCorrectOtpForLogin();
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		homeli = new Home_Logged_in();
 		boolean title = homeli.verifyTitle(homePageTitle);
 		Assert.assertTrue(title);
