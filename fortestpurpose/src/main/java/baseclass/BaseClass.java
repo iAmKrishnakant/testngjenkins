@@ -26,7 +26,8 @@ public class BaseClass {
 	@BeforeSuite
 	public void setUp() {
 		report = new ExtentReports();
-		htmlReporter = new ExtentSparkReporter("test-output\\ExtentReport.html");
+		htmlReporter = new ExtentSparkReporter(System.getProperty("user.dir") +"\\test-output\\ExtentReport.html");
+		System.out.println(System.getProperty("user.dir") +"\\test-output\\ExtentReport.html");
 		htmlReporter.config().setDocumentTitle("Extent Test Report");
 		htmlReporter.config().setReportName("Flipkart Testcases Reports");
 		htmlReporter.config().setTheme(Theme.STANDARD);
@@ -66,6 +67,7 @@ public class BaseClass {
 		//driver.quit();
 		if(report != null) {
 			System.out.println("report done");
+			System.out.println("Report saved to: " + System.getProperty("user.dir") +"\\test-output\\ExtentReport.html");
 			report.flush();
 		}
 	}
