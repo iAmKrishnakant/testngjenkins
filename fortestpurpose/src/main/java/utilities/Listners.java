@@ -21,7 +21,7 @@ public class Listners implements ITestListener {
 		System.out.println("screen shot method");
 		File f = ((TakesScreenshot)bs.driver).getScreenshotAs(OutputType.FILE);
 		try {
-			FileUtils.copyFile(f,new File ("C:\\Users\\kaila\\eclipse-workspace\\flipkartProject\\screenshot\\"+tc+count+".jpg"));
+			FileUtils.copyFile(f,new File ("C:\\New folder\\"+tc+count+".jpg"));
 		} catch (IOException e) {
 			e.printStackTrace();
 			System.out.println("failed to take screenshot");

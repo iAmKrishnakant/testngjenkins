@@ -3,7 +3,11 @@
 <suite name="Suite">
   <test name="Test">
     <classes>
-      <class name="testcases.TestCases"/>
+      <class name="testcases.TestCases">
+      <methods>
+      <exclude name=""></exclude>
+      </methods>
+      </class>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

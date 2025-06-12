@@ -60,7 +60,7 @@ public class VerifyLogInOTP extends BaseClass {
 	}
 	
 	public void enterCorrectOtpForLogin() throws InterruptedException {
-		Thread.sleep(12000);;
+		Thread.sleep(30000);;
 	}
 	
 	public boolean verifyInvalidOtpError(String expectedMsg) {

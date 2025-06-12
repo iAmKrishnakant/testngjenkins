@@ -26,7 +26,7 @@ public class BaseClass {
 	@BeforeSuite
 	public void setUp() {
 		report = new ExtentReports();
-		htmlReporter = new ExtentSparkReporter("C:\\Users\\kaila\\eclipse-workspace\\flipkartProject\\reports\\reportflipkart.html");
+		htmlReporter = new ExtentSparkReporter("C:\\Users\\kaila\\git\\jenkinspuropose\\fortestpurpose\\test-output\\testrepo.html");
 		htmlReporter.config().setDocumentTitle("Flipkart Report");
 		htmlReporter.config().setReportName("Flipkart Testcases Reports");
 		htmlReporter.config().setTheme(Theme.STANDARD);
@@ -53,7 +53,7 @@ public class BaseClass {
 		
 		System.out.println("browser selected");
 		
-		driver.manage().window().maximize();
+		//driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
 		driver.navigate().to("https://www.flipkart.com");;
 	}
@@ -62,7 +62,7 @@ public class BaseClass {
 	
 	@AfterSuite
 	public void closing() {
-		driver.quit();
+		//driver.quit();
 		if(report != null) {
 			System.out.println("report done");
 			report.flush();

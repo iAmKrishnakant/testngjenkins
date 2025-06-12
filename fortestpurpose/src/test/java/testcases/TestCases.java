@@ -85,7 +85,7 @@ public class TestCases extends BaseClass {
 		
 	}
 	
-	@Test (priority = 2 ,dataProvider = "phonenumber for login" , dataProviderClass = DataProviderClass.class)
+	@Test (dataProvider = "phonenumber for login" , dataProviderClass = DataProviderClass.class)
 	public void login(long mobileNumber , String scenario) {
 		
 		// before signup or login update mobile numer in data provider
@@ -131,11 +131,13 @@ public class TestCases extends BaseClass {
 			}
 			homeli = new Home_Logged_in();
 			boolean title = homeli.verifyTitle(homePageTitle);
-
+			System.out.println("comparing title");
 			try {
 				Assert.assertTrue(title);
 				log.log(Status.PASS,"successfully logedin and user nevigate to home page");
+				System.out.println("done");
 				}catch(AssertionError ae){
+				System.out.println("in catch");
 				Listners.takeScreenshot("login"); 
 				log.log(Status.FAIL,"successfully logedin and user nevigate to home page");
 				}
@@ -149,7 +151,9 @@ public class TestCases extends BaseClass {
 
 	}
 	
-	//@Test(priority = 3)
+	//
+	
+	//@Test
 	public void addProductInCart() {
 		// before signup or login update mobile number
 		String homePageTitle = "Online Shopping Site for Mobiles, Electronics, Furniture, Grocery, Lifestyle, Books & More. Best Offers!";

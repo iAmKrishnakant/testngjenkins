@@ -17,7 +17,7 @@ public class DataProviderClass {
     public Object[][] dataProviderForPhoneNUmber() {
         Object[][] testData = {
                 {1L, "invalid number"},
-                {875487210L, "correct number"}
+                {8140281352L, "correct number"}
         };
         return testData;
     }

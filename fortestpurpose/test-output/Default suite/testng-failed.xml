@@ -5,8 +5,8 @@
     <classes>
       <class name="testcases.TestCases">
         <methods>
-          <include name="addProductInCart"/>
           <include name="closing"/>
+          <include name="login" invocation-numbers="1"/>
           <include name="launch"/>
           <include name="setUp"/>
         </methods>
