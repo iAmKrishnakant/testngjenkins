@@ -26,7 +26,7 @@ public class BaseClass {
 	@BeforeSuite
 	public void setUp() {
 		report = new ExtentReports();
-		htmlReporter = new ExtentSparkReporter("C:\\Users\\kaila\\git\\jenkinspuropose\\fortestpurpose\\test-output\\ExtentReport.html");
+		htmlReporter = new ExtentSparkReporter("test-output\\ExtentReport.html");
 		htmlReporter.config().setDocumentTitle("Extent Test Report");
 		htmlReporter.config().setReportName("Flipkart Testcases Reports");
 		htmlReporter.config().setTheme(Theme.STANDARD);
