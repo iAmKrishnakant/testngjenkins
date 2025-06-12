@@ -169,6 +169,7 @@ public class TestCases extends BaseClass {
 		String checkOutPageTitle = "Flipkart.com: Secure Payment: Login > Select Shipping Address > Review Order > Place Order";
 		hp = new Home_Page();
 		boolean titlehome = hp.verifyTitle("Online Shopping Site for Mobiles, Electronics, Furniture, Grocery, Lifestyle, Books & More. Best Offers!");
+		log.log(Status.PASS,"First page done");
 		Assert.assertTrue(titlehome);
 		lg = hp.clickOnLogin();
 		log.log(Status.PASS,"successfully click on login");
