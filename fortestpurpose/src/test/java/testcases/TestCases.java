@@ -85,7 +85,7 @@ public class TestCases extends BaseClass {
 		
 	}
 	
-	@Test (dataProvider = "phonenumber for login" , dataProviderClass = DataProviderClass.class)
+	//@Test (dataProvider = "phonenumber for login" , dataProviderClass = DataProviderClass.class)
 	public void login(long mobileNumber , String scenario) {
 		
 		// before signup or login update mobile numer in data provider
@@ -153,9 +153,10 @@ public class TestCases extends BaseClass {
 	
 	//
 	
-	//@Test
+	@Test
 	public void addProductInCart() {
 		// before signup or login update mobile number
+		log = report.createTest("login add pro"  );
 		String homePageTitle = "Online Shopping Site for Mobiles, Electronics, Furniture, Grocery, Lifestyle, Books & More. Best Offers!";
 		long mobileNumber = 6354635550L;
 		String Searchdata = "iphone 16";
@@ -170,6 +171,7 @@ public class TestCases extends BaseClass {
 		boolean titlehome = hp.verifyTitle("Online Shopping Site for Mobiles, Electronics, Furniture, Grocery, Lifestyle, Books & More. Best Offers!");
 		Assert.assertTrue(titlehome);
 		lg = hp.clickOnLogin();
+		log.log(Status.PASS,"successfully click on login");
 		lg.enterMobilenumber(mobileNumber);
 		lgOtp = lg.clickOnReqOTP();
 		try {
@@ -180,6 +182,7 @@ public class TestCases extends BaseClass {
 		}
 		homeli = new Home_Logged_in();
 		boolean title = homeli.verifyTitle(homePageTitle);
+		log.log(Status.PASS,"successfully logedin and user nevigate to home page");
 		Assert.assertTrue(title);
 		homeli = new Home_Logged_in();
 		System.out.println("ocject init");
@@ -204,6 +207,7 @@ public class TestCases extends BaseClass {
 		cout = cart.clickOnPlaceOrder();
 		boolean checkOutTitle = cout.verifyTitle(checkOutPageTitle);
 		Assert.assertTrue(checkOutTitle);
+		log.log(Status.PASS,"tst done");
 	}
 	
 	

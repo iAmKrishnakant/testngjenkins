@@ -26,8 +26,8 @@ public class BaseClass {
 	@BeforeSuite
 	public void setUp() {
 		report = new ExtentReports();
-		htmlReporter = new ExtentSparkReporter("C:\\Users\\kaila\\git\\jenkinspuropose\\fortestpurpose\\test-output\\testrepo.html");
-		htmlReporter.config().setDocumentTitle("Flipkart Report");
+		htmlReporter = new ExtentSparkReporter("C:\\Users\\kaila\\git\\jenkinspuropose\\fortestpurpose\\test-output\\ExtentReport.html");
+		htmlReporter.config().setDocumentTitle("Extent Test Report");
 		htmlReporter.config().setReportName("Flipkart Testcases Reports");
 		htmlReporter.config().setTheme(Theme.STANDARD);
 		report.attachReporter(htmlReporter);
@@ -36,6 +36,7 @@ public class BaseClass {
 	@BeforeMethod
 	public void launch() {
 		String browser = "chrome";
+		
 		
 		if(browser.equalsIgnoreCase("chrome")) {
 			WebDriverManager.chromedriver().setup();
