@@ -158,7 +158,7 @@ public class TestCases extends BaseClass {
 		// before signup or login update mobile number
 		log = report.createTest("login add pro"  );
 		String homePageTitle = "Online Shopping Site for Mobiles, Electronics, Furniture, Grocery, Lifestyle, Books & More. Best Offers!";
-		long mobileNumber = 6354635550L;
+		long mobileNumber = 9636985203L;
 		String Searchdata = "iphone 16";
 		String productName = "Apple iPhone 16 (Black, 256 GB)";
 		String proDetailsPageTitle = "Apple iPhone 16 ( 256 GB Storage, 0 GB RAM ) Online at Best Price On Flipkart.com";
